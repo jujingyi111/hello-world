@@ -1,0 +1,18 @@
+char *strcpy(char *strDst,const char *strSrc)//使用const表明原字符串是不可变得，此外还用const来表示*strScr是输入参数
+
+{
+   char *address=strDst；//保存目的串的首地址，因为接下来strDst指针是在移动的，最后不是指向字符串首地址的
+
+   if(strDst==NULL||strSrc==NULL)
+
+  return NULL;
+
+if(strDst==strSrc)
+
+return strDst;
+
+ while((*strDst++=*strSrc++)!='\0');/注意这里直接分号结束
+
+return address;
+
+}
